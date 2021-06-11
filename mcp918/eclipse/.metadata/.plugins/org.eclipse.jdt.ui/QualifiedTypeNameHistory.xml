@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="xyz.hackage.rewritten.modules.movement.Longjump"/>
+    <fullyQualifiedTypeName name="xyz.hackage.rewritten.modules.movement.Velocity"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.Comparator"/>
+    <fullyQualifiedTypeName name="net.minecraft.network.play.client.C02PacketUseEntity"/>
+    <fullyQualifiedTypeName name="net.minecraft.network.play.client.C02PacketUseEntity.Action"/>
+    <fullyQualifiedTypeName name="xyz.hackage.rewritten.util.TimerButBetterBecauseICantCodeLmao"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="xyz.hackage.rewritten.modules.combat.RotationAura"/>
+    <fullyQualifiedTypeName name="net.minecraft.client.network.NetworkPlayerInfo"/>
+    <fullyQualifiedTypeName name="net.minecraft.entity.Entity"/>
+    <fullyQualifiedTypeName name="xyz.hackage.rewritten.modules.player.Experimental"/>
+    <fullyQualifiedTypeName name="com.mojang.realmsclient.gui.ChatFormatting"/>
+    <fullyQualifiedTypeName name="net.minecraft.network.play.client.C03PacketPlayer"/>
+    <fullyQualifiedTypeName name="xyz.hackage.rewritten.events.listeners.EventMotion"/>
+    <fullyQualifiedTypeName name="xyz.hackage.rewritten.modules.player.Phase"/>
+    <fullyQualifiedTypeName name="net.minecraft.client.gui.GuiScreen"/>
+    <fullyQualifiedTypeName name="net.minecraft.util.ResourceLocation"/>
+    <fullyQualifiedTypeName name="net.minecraft.client.gui.Gui"/>
+    <fullyQualifiedTypeName name="xyz.hackage.rewritten.gui.GuiBind"/>
+    <fullyQualifiedTypeName name="xyz.hackage.rewritten.commands.actual_commands.Bind"/>
+    <fullyQualifiedTypeName name="xyz.hackage.rewritten.HUD"/>
+    <fullyQualifiedTypeName name="xyz.hackage.rewritten.util.NotificationManager"/>
+    <fullyQualifiedTypeName name="xyz.hackage.rewritten.util.Notification"/>
+    <fullyQualifiedTypeName name="xyz.hackage.rewritten.modules.render.ClickGuiModule"/>
+    <fullyQualifiedTypeName name="xyz.hackage.rewritten.events.Event"/>
+    <fullyQualifiedTypeName name="xyz.hackage.rewritten.events.listeners.EventUpdate"/>
+    <fullyQualifiedTypeName name="xyz.hackage.rewritten.modules.movement.Speed"/>
+    <fullyQualifiedTypeName name="xyz.hackage.rewritten.util.MoveUtil"/>
+    <fullyQualifiedTypeName name="net.minecraft.client.renderer.GlStateManager"/>
+    <fullyQualifiedTypeName name="net.minecraft.client.gui.ScaledResolution"/>
+    <fullyQualifiedTypeName name="net.minecraft.client.Minecraft"/>
+    <fullyQualifiedTypeName name="xyz.hackage.rewritten.modules.render.HudModule"/>
+    <fullyQualifiedTypeName name="xyz.hackage.rewritten.modules.Module"/>
+    <fullyQualifiedTypeName name="org.lwjgl.input.Keyboard"/>
+    <fullyQualifiedTypeName name="net.minecraft.network.play.client.C03PacketPlayer.C04PacketPlayerPosition"/>
+    <fullyQualifiedTypeName name="net.minecraft.entity.player.EntityPlayer"/>
+    <fullyQualifiedTypeName name="net.minecraft.entity.EntityLivingBase"/>
+    <fullyQualifiedTypeName name="xyz.hackage.rewritten.events.listeners.EventTeleport"/>
+    <fullyQualifiedTypeName name="net.minecraft.util.Vec3i"/>
+    <fullyQualifiedTypeName name="xyz.hackage.rewritten.modules.settings.ModeSetting"/>
+    <fullyQualifiedTypeName name="net.minecraft.util.BlockPos"/>
+    <fullyQualifiedTypeName name="xyz.hackage.rewritten.Client"/>
+</qualifiedTypeNameHistroy>

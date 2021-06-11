@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Toggle.java&apos; to &apos;Client/src/xyz.hackage.rewritten.commands.actual_commands&apos;&#x0D;&#x0A;- Original project: &apos;Client&apos;&#x0D;&#x0A;- Destination element: &apos;Client/src/xyz.hackage.rewritten.commands.actual_commands&apos;&#x0D;&#x0A;- Original element: &apos;xyz.hackage.rewritten.commands.actual_commands.Toggle.java&apos;" description="Copy compilation unit" destination="/src&lt;xyz.hackage.rewritten.commands.actual_commands" element1="/src&lt;xyz.hackage.rewritten.commands.actual_commands{Toggle.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1622811058116" units="1" version="1.0"/>
+</session>

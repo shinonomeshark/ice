@@ -1,0 +1,12 @@
+package xyz.hackage.rewritten.modules.player;
+
+import xyz.hackage.rewritten.modules.Module;
+
+public class AutoLongJump extends Module {
+
+	public AutoLongJump() {
+		super("AutoLongJump", ModDescription, ModKeybind, ModCategory);
+		// TODO Auto-generated constructor stub
+	}
+
+}

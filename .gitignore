@@ -1,6 +1,9 @@
 # Compiled class file
 *.class
 
+# Eclipse metadata which makes github commit suicide
+/eclipse/.metadata
+
 # Log file
 *.log
 
