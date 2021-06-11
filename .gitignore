@@ -4,9 +4,12 @@
 # Chonky folders
 /mcp918/eclipse/.metadata
 /mcp918/jars/assets/skins
+/mcp918/jars/crash-reports
+/mcp918/jars/saves
 
 # Log file
 *.log
+*.log.gz
 
 # BlueJ files
 *.ctxt
