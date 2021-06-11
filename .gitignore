@@ -1,8 +1,9 @@
 # Compiled class file
 *.class
 
-# Eclipse metadata which makes github commit suicide
-/eclipse/.metadata
+# Chonky folders
+/mcp918/eclipse/.metadata
+/mcp918/jars/assets/skins
 
 # Log file
 *.log
