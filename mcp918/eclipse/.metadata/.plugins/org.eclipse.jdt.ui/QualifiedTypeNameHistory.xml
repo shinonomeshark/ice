@@ -17,7 +17,6 @@
     <fullyQualifiedTypeName name="net.minecraft.network.play.client.C03PacketPlayer"/>
     <fullyQualifiedTypeName name="xyz.hackage.rewritten.events.listeners.EventMotion"/>
     <fullyQualifiedTypeName name="xyz.hackage.rewritten.modules.player.Phase"/>
-    <fullyQualifiedTypeName name="net.minecraft.client.gui.GuiScreen"/>
     <fullyQualifiedTypeName name="net.minecraft.util.ResourceLocation"/>
     <fullyQualifiedTypeName name="net.minecraft.client.gui.Gui"/>
     <fullyQualifiedTypeName name="xyz.hackage.rewritten.gui.GuiBind"/>
@@ -26,15 +25,11 @@
     <fullyQualifiedTypeName name="xyz.hackage.rewritten.util.NotificationManager"/>
     <fullyQualifiedTypeName name="xyz.hackage.rewritten.util.Notification"/>
     <fullyQualifiedTypeName name="xyz.hackage.rewritten.modules.render.ClickGuiModule"/>
-    <fullyQualifiedTypeName name="xyz.hackage.rewritten.events.Event"/>
     <fullyQualifiedTypeName name="xyz.hackage.rewritten.events.listeners.EventUpdate"/>
     <fullyQualifiedTypeName name="xyz.hackage.rewritten.modules.movement.Speed"/>
     <fullyQualifiedTypeName name="xyz.hackage.rewritten.util.MoveUtil"/>
-    <fullyQualifiedTypeName name="net.minecraft.client.renderer.GlStateManager"/>
     <fullyQualifiedTypeName name="net.minecraft.client.gui.ScaledResolution"/>
-    <fullyQualifiedTypeName name="net.minecraft.client.Minecraft"/>
     <fullyQualifiedTypeName name="xyz.hackage.rewritten.modules.render.HudModule"/>
-    <fullyQualifiedTypeName name="xyz.hackage.rewritten.modules.Module"/>
     <fullyQualifiedTypeName name="org.lwjgl.input.Keyboard"/>
     <fullyQualifiedTypeName name="net.minecraft.network.play.client.C03PacketPlayer.C04PacketPlayerPosition"/>
     <fullyQualifiedTypeName name="net.minecraft.entity.player.EntityPlayer"/>
@@ -44,4 +39,15 @@
     <fullyQualifiedTypeName name="xyz.hackage.rewritten.modules.settings.ModeSetting"/>
     <fullyQualifiedTypeName name="net.minecraft.util.BlockPos"/>
     <fullyQualifiedTypeName name="xyz.hackage.rewritten.Client"/>
+    <fullyQualifiedTypeName name="xyz.hackage.rewritten.util.SystemTimerUtil"/>
+    <fullyQualifiedTypeName name="net.minecraft.item.ItemStack"/>
+    <fullyQualifiedTypeName name="net.minecraft.item.ItemBlock"/>
+    <fullyQualifiedTypeName name="net.minecraft.item.ItemBow"/>
+    <fullyQualifiedTypeName name="xyz.hackage.rewritten.modules.Module"/>
+    <fullyQualifiedTypeName name="xyz.hackage.rewritten.events.Event"/>
+    <fullyQualifiedTypeName name="net.minecraft.client.gui.GuiScreen"/>
+    <fullyQualifiedTypeName name="xyz.hackage.rewritten.gui.TestGui"/>
+    <fullyQualifiedTypeName name="xyz.hackage.rewritten.modules.render.GuiTesting"/>
+    <fullyQualifiedTypeName name="net.minecraft.client.renderer.GlStateManager"/>
+    <fullyQualifiedTypeName name="net.minecraft.client.Minecraft"/>
 </qualifiedTypeNameHistroy>

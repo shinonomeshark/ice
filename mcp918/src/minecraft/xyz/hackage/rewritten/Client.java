@@ -9,6 +9,7 @@ import net.minecraft.util.ChatComponentText;
 import xyz.hackage.rewritten.commands.CmdMgr;
 import xyz.hackage.rewritten.events.EventManager;
 import xyz.hackage.rewritten.events.listeners.EventTeleport;
+import xyz.hackage.rewritten.gui.TestGui;
 import xyz.hackage.rewritten.modules.Module;
 import xyz.hackage.rewritten.modules.combat.HitboxAura;
 import xyz.hackage.rewritten.modules.combat.RotationAura;
@@ -28,6 +29,7 @@ import xyz.hackage.rewritten.modules.player.NoFall;
 import xyz.hackage.rewritten.modules.player.Phase;
 import xyz.hackage.rewritten.modules.render.ClickGuiModule;
 import xyz.hackage.rewritten.modules.render.Esp;
+import xyz.hackage.rewritten.modules.render.GuiTesting;
 import xyz.hackage.rewritten.modules.render.HudModule;
 import xyz.hackage.rewritten.modules.render.NoHurtCam;
 import xyz.hackage.rewritten.util.Notification;
@@ -98,6 +100,7 @@ public class Client {
 		mods.add(new Experimental());
 		mods.add(new Phase());
 		mods.add(new Speed());
+		mods.add(new GuiTesting());
 	}
 	
 	public static void addChat(String message) {
