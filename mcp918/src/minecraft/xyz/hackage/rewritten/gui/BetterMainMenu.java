@@ -78,7 +78,41 @@ public class BetterMainMenu extends GuiScreen {
 
 		this.drawRect(0, 0, 150, sr.getScaledHeight(), 0x90000000);
       
-      
+//		 GlStateManager.pushMatrix();
+//         GL11.glEnable(GL11.GL_BLEND);
+//         GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
+//         GL11.glEnable(GL11.GL_LINE_SMOOTH);
+//         GL11.glDisable(GL11.GL_TEXTURE_2D);
+//         GL11.glEnable(GL11.GL_CULL_FACE);
+//         GL11.glDisable(GL11.GL_DEPTH_TEST);
+//         GL11.glDisable(GL11.GL_LIGHTING);
+//         
+////         GL11.glColor3d(255, 0, 0);
+//         
+//         double twicePi = 2.0 * Math.PI;
+//         double radius = 0.3d;
+//         
+//         GL11.glBegin(GL11.GL_QUADS);
+//         GL11.glVertex2i(0,0);
+//         GL11.glVertex2i(500,0);
+//         GL11.glVertex2i(500,-5);
+//         GL11.glVertex2i(0,-5);
+//         
+////         GL11.glVertex2i(this.xPosition, this.yPosition);
+////         for (i = 0; i <= 20; i++)   {
+////             GL11.glVertex2d (
+////                 (this.xPosition + (radius * Math.cos(i * twicePi / 20))), (this.yPosition + (radius * Math.sin(i * twicePi / 20)))
+////                 );
+////         }
+//         GL11.glEnd();
+//         
+//         GL11.glEnable(GL11.GL_DEPTH_TEST);
+//         GL11.glEnable(GL11.GL_TEXTURE_2D);
+//         GL11.glDisable(GL11.GL_BLEND);
+//         GL11.glDisable(GL11.GL_LINE_SMOOTH);
+//         GlStateManager.popMatrix();
+		
+		
 		GlStateManager.color(255, 255, 255);
 //		this.mc.getTextureManager().bindTexture(new ResourceLocation("hackage/icons/logo.png"));
 //		this.drawModalRectWithCustomSizedTexture(0, 5, 0, 0, 32, 32, 32, 32);

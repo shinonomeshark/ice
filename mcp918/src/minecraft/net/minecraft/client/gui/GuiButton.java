@@ -1,9 +1,12 @@
 package net.minecraft.client.gui;
 
+import org.lwjgl.opengl.GL11;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.audio.PositionedSoundRecord;
 import net.minecraft.client.audio.SoundHandler;
 import net.minecraft.client.renderer.GlStateManager;
+import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
 import net.minecraft.util.ResourceLocation;
 import xyz.hackage.rewritten.Client;
 
@@ -54,12 +57,32 @@ public class GuiButton extends Gui {
          GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
          this.hovered = mouseX >= this.xPosition && mouseY >= this.yPosition && mouseX < this.xPosition + this.width && mouseY < this.yPosition + this.height;
          int i = this.getHoverState(this.hovered);
-         GlStateManager.enableBlend();
-         GlStateManager.tryBlendFuncSeparate(770, 771, 1, 0);
-         GlStateManager.blendFunc(770, 771);
-//         this.drawTexturedModalRect(this.xPosition, this.yPosition, 0, 46 + i * 20, this.width / 2, this.height);
-//         this.drawTexturedModalRect(this.xPosition + this.width / 2, this.yPosition, 200 - this.width / 2, 46 + i * 20, this.width / 2, this.height);
+//         GlStateManager.enableBlend();
+//         GlStateManager.tryBlendFuncSeparate(770, 771, 1, 0);
+//         GlStateManager.blendFunc(770, 771);
+////         this.drawTexturedModalRect(this.xPosition, this.yPosition, 0, 46 + i * 20, this.width / 2, this.height);
+////         this.drawTexturedModalRect(this.xPosition + this.width / 2, this.yPosition, 200 - this.width / 2, 46 + i * 20, this.width / 2, this.height);
          this.drawGradientRect(this.xPosition, this.yPosition, this.width+this.xPosition, this.height+this.yPosition, 0x90000000, 0x90000000);
+//         
+//         GlStateManager.enableBlend();
+//         GlStateManager.disableTexture2D();
+//         GlStateManager.tryBlendFuncSeparate(770, 771, 1, 0);
+////         GlStateManager.color(f, f1, f2, f3);
+//         GL11.glBegin(GL11.GL_TRIANGLE_FAN);
+//         
+//         GL11.glVertex2i(this.xPosition, this.yPosition);
+//	     for (i = 0; i <= 20; i++)   {
+//	         GL11.glVertex2d (
+//	             (this.xPosition + (radius * Math.cos(i * twicePi / 20))), (this.yPosition + (radius * Math.sin(i * twicePi / 20)))
+//	             );
+//	     }
+//         
+//         GL11.glEnd();
+//         GlStateManager.enableTexture2D();
+//         GlStateManager.disableBlend();
+        
+         
+         
          this.mouseDragged(mc, mouseX, mouseY);
          int j = 0xffffffff;
          if(!this.enabled) {

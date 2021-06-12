@@ -97,7 +97,7 @@ public class Longjump extends Module {
 				}
 				
 				if(t < 4) {
-					mc.thePlayer.motionY = 0.37f;
+					mc.thePlayer.motionY = 0.36f;
 					
 				} else {
 					if(mc.thePlayer.motionY < 0f) {
@@ -122,7 +122,7 @@ public class Longjump extends Module {
 //				mc.thePlayer.motionX = 0f;
 //				mc.thePlayer.motionZ = 0f;
 //				mc.thePlayer.onGround = true;
-				MoveUtil.strafe(0.59d);
+				MoveUtil.strafe(0.55d);
 			}
 		} else if(e instanceof EventTeleport) {
 			this.toggle();
