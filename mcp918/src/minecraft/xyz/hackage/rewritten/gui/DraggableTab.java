@@ -9,11 +9,13 @@ import xyz.hackage.rewritten.HUD;
 import xyz.hackage.rewritten.modules.Module;
 import xyz.hackage.rewritten.modules.Module.Category;
 import xyz.hackage.rewritten.modules.render.ClickGuiModule;
+import xyz.hackage.rewritten.modules.render.HudModule;
 import xyz.hackage.rewritten.modules.settings.BooleanSetting;
 import xyz.hackage.rewritten.modules.settings.ModeSetting;
 import xyz.hackage.rewritten.modules.settings.Setting;
 import xyz.hackage.rewritten.util.Notification;
 import xyz.hackage.rewritten.util.NotificationManager;
+import xyz.hackage.rewritten.util.RainbowUtil;
 
 public class DraggableTab {
 	
@@ -128,14 +130,28 @@ public class DraggableTab {
 		ScaledResolution sr = new ScaledResolution(Minecraft.getMinecraft());
 		String mode = ((ModeSetting) Client.getMod(new ClickGuiModule().name).settings.get(0)).getMode();
 		
-		if(mode == "pine") {
-			color1 = 0xff80ff80;
+		int TitleColor = 0xff000000;
+		int txtColorOn = -1;
+		int backingColor = 0x80000000;
+		
+		if(mode == "ranee") {
+			color1 = 0xff000000;
 			color2 = 0xcc000000;
-			txtColor = -1;
+			txtColor = 0xff009e00;
+			txtColorOn = 0xff000000;
+			TitleColor = -1;
+			backingColor = -1;
 		} else if(mode == "sync") {
 			color1 = HUD.c1;
 			color2 = 0xcc000000;
 			txtColor = -1;
+			if(((ModeSetting) Client.getMod(new HudModule().name).settings.get(0)).getMode() == "astolfo") {
+//				txtColorOn = RainbowUtil.SkyRainbow(0.1f, 1f, 0.6f);
+			} else {
+				txtColorOn = HUD.c1;
+			}
+			TitleColor = 0xff000000;
+			backingColor = 0xcc000000;
 		}
 		
 		if(dragging) {
@@ -146,7 +162,7 @@ public class DraggableTab {
 //		System.out.println(openMod);
 		
 		Gui.drawRect(x, y, x+70, y+10, color1);
-		Client.sufr.drawString(t, x+4, y, 0xff000000);
+		Client.sufr.drawString(t, x+4, y, TitleColor);
 		
 		String descToDraw = ""; // this is here so it overlaps everything
 		
@@ -154,32 +170,35 @@ public class DraggableTab {
 		if(open) {
 			for(Module m : Client.mods) {
 				if(m.cat == cat) {
-					Gui.drawRect(x, y+(10*offset), x+70, y+(10*offset)+10, color2);
-					Client.sufr.drawString(m.name, x+4, y+(10*offset), m.toggled ? color1 : txtColor);
+					Gui.drawRect(x, y+(10*offset), x+70, y+(10*offset)+10, backingColor);
+					if(mode == "sync" && ((ModeSetting) Client.getMod(new HudModule().name).settings.get(0)).getMode() == "astolfo") {
+						txtColorOn = RainbowUtil.SkyRainbow(offset, 1f, 0.6f);
+					}
+					Client.sufr.drawString(m.name, x+4, y+(10*offset), m.toggled ? txtColorOn : txtColor);
 					
 					int sY = y+(10*offset);
 					
 					
 					
 					if(m.name == openMod) {
-						Client.sufr.drawString("<", x+60, y+(10*offset), color1);
+						Client.sufr.drawString("<", x+60, y+(10*offset), txtColorOn);
 						
 						int settOff = 0;
 						for(Setting s : m.settings) {
-							Gui.drawRect(x+70, sY+(10*settOff), x+140, sY+(10*settOff)+10, color2);
+							Gui.drawRect(x+70, sY+(10*settOff), x+140, sY+(10*settOff)+10, backingColor);
 							if(s instanceof BooleanSetting) {
 								Client.sufr.drawString(s.getName(), x+70+4, sY+(10*settOff), ((BooleanSetting)s).getValue() ? 0xff80ff80 : 0xffff8080);
 							}
 							if(s instanceof ModeSetting) {
-								Client.sufr.drawString(s.getName() + ": " +((ModeSetting) s).getMode(), x+70+4, sY+(10*settOff), txtColor);
+								Client.sufr.drawString(s.getName() + ": " +((ModeSetting) s).getMode(), x+70+4, sY+(10*settOff), txtColorOn);
 							}
 							
 							settOff++;
 						}
-						Gui.drawRect(x+70, sY, x+71, sY+(10*settOff), color1);
+						Gui.drawRect(x+70, sY, x+71, sY+(10*settOff), txtColorOn);
 					} else {
 						if(m.settings.size() != 0) {
-							Client.sufr.drawString(">", x+60, y+(10*offset), color1);
+							Client.sufr.drawString(">", x+60, y+(10*offset), txtColorOn);
 						}
 					}
 					

@@ -3,20 +3,20 @@ mouseSensitivity:0.5
 fov:0.75
 gamma:1.0
 saturation:0.0
-renderDistance:4
+renderDistance:3
 guiScale:2
 particles:1
 bobView:true
 anaglyph3d:false
 maxFps:260
 fboEnable:true
-difficulty:1
+difficulty:0
 fancyGraphics:false
 ao:0
 renderClouds:false
 resourcePacks:["Terraria Sounds Overlay","! §amint §8[§f16§ax§8].zip"]
 incompatibleResourcePacks:[]
-lastServer:poke.sexy
+lastServer:kokscraft.pl
 lang:en_US
 chatVisibility:0
 chatColors:true

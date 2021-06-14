@@ -20,7 +20,7 @@ public class Sprint extends Module {
 				if(!Client.modOn(new Scaffold().name)) {
 					mc.thePlayer.setSprinting(true);
 				} else {
-					mc.thePlayer.setSprinting(false);
+					mc.thePlayer.setSprinting(true);
 				}
 				
 			}

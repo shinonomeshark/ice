@@ -41,6 +41,7 @@ public class GuiBind extends GuiScreen {
 	public void initGui() {
 		Minecraft.getMinecraft().entityRenderer.loadShader(new ResourceLocation("shaders/post/blur.json"));
 		tim.resetTime();
+		Client.addChat(m.name + " is currently bound to " + Keyboard.getKeyName(m.getKey()));
 //		Client.addChat("kaboo1m");
 	}
 	
@@ -92,12 +93,12 @@ public class GuiBind extends GuiScreen {
 		
 //		Client.bufr.getS
 		
-		int thing = (int) (Client.bufr.getStringWidth(m.name + " is bound to " + Keyboard.getKeyName(m.getKey()))/1.8);
+		int thing = (int) (Client.ufr.getStringWidth(m.name + " is bound to " + Keyboard.getKeyName(m.getKey()))/1.8);
 		
-		GuiUtil.renderRoundedQuad(new Vec3(sr.getScaledWidth()/2-thing, sr.getScaledHeight()/2-40, 0), new Vec3(sr.getScaledWidth()/2+thing, sr.getScaledHeight()/2+40, 0), 5, new Color(0xff000000, true));
+		GuiUtil.renderRoundedQuad(new Vec3(sr.getScaledWidth()/2-thing, sr.getScaledHeight()/2-20, 0), new Vec3(sr.getScaledWidth()/2+thing, sr.getScaledHeight()/2+20, 0), 5, new Color(0xff000000, true));
 		
-		Client.bufr.drawCenteredString(m.name + " is bound to " + Keyboard.getKeyName(m.getKey()), sr.getScaledWidth()/2, sr.getScaledHeight()/2-35, HUD.c1);
-		Client.ufr.drawCenteredString("press any key to rebind", sr.getScaledWidth()/2, sr.getScaledHeight()/2+20, -1);
+		Client.ufr.drawCenteredString(m.name + " is bound to " + Keyboard.getKeyName(m.getKey()), sr.getScaledWidth()/2, sr.getScaledHeight()/2-10, HUD.c1);
+		Client.sufr.drawCenteredString("press any key to rebind", sr.getScaledWidth()/2, sr.getScaledHeight()/2+10, -1);
 		GlStateManager.popMatrix();
 	}
 	

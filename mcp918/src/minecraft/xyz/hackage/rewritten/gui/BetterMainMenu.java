@@ -114,8 +114,8 @@ public class BetterMainMenu extends GuiScreen {
 		
 		
 		GlStateManager.color(255, 255, 255);
-//		this.mc.getTextureManager().bindTexture(new ResourceLocation("hackage/icons/logo.png"));
-//		this.drawModalRectWithCustomSizedTexture(0, 5, 0, 0, 32, 32, 32, 32);
+		this.mc.getTextureManager().bindTexture(new ResourceLocation("hackage/icons/logo.png"));
+		this.drawModalRectWithCustomSizedTexture(130, 5, 0, 0, 120, 120, 120, 120);
 		Client.sbufr.drawString("Sentinel", 46, 7, -1);
 //		Client.ufr.drawString(Client.VERSION, this.width - Client.ufr.getStringWidth(Client.VERSION) - 4, this.height - 14, 0xff000000);
 		

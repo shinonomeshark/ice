@@ -7,7 +7,7 @@ import xyz.hackage.rewritten.modules.settings.ModeSetting;
 
 public class HudModule extends Module {
 	
-	public ModeSetting colorScheme = new ModeSetting("color", "chroma", "chroma", "pine");
+	public static ModeSetting colorScheme = new ModeSetting("color", "chroma", "chroma", "pine", "astolfo");
 	
 	public HudModule() {
 		super("HUD", "shows arraylist and branding and stuff", Keyboard.KEY_NONE, Category.RENDER);

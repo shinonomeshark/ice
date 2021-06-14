@@ -164,6 +164,15 @@ public class Scaffold extends Module {
 			
 			placeBlockSimple(new BlockPos(mc.thePlayer.posX, mc.thePlayer.posY-1, mc.thePlayer.posZ));
 			
+//			if(mc.gameSettings.keyBindJump.pressed) {
+//				if(ticks % 2 ==0)
+//					if(mc.thePlayer.onGround)
+//						mc.thePlayer.motionY = 0.7f;
+//				else
+//					mc.thePlayer.motionY = 0f;
+//				mc.thePlayer.setPosition(mc.thePlayer.posX, mc.thePlayer.posY+0.3f, mc.thePlayer.posZ);
+//			}
+			
 		}
 		if(e instanceof EventMotion) {
 //			((EventMotion) e).setPitch(75);

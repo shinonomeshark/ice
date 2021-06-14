@@ -35,6 +35,8 @@ public class Fly extends Module {
 			t = 0;
 			mc.thePlayer.sendQueue.addToSendQueue(new C03PacketPlayer.C04PacketPlayerPosition(mc.thePlayer.posX, mc.thePlayer.posY+0.1f, mc.thePlayer.posZ, true));
 			mc.thePlayer.swingItem();
+		} else if(mode.getMode() == "dev") {
+			
 		}
 	}
 	
@@ -48,7 +50,7 @@ public class Fly extends Module {
 			t++;
 //			mc.thePlayer.motionY = 0.5f;
 			
-			if(mode.getMode() == "vanilla") {
+			if(mode.getMode() == "dev") {
 				mc.thePlayer.motionY = 0;
 				if(mc.gameSettings.keyBindJump.pressed) {
 					mc.thePlayer.motionY = 1;

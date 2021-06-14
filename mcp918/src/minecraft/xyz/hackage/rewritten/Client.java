@@ -31,6 +31,7 @@ import xyz.hackage.rewritten.modules.render.ClickGuiModule;
 import xyz.hackage.rewritten.modules.render.Esp;
 import xyz.hackage.rewritten.modules.render.GuiTesting;
 import xyz.hackage.rewritten.modules.render.HudModule;
+import xyz.hackage.rewritten.modules.render.InformationBox;
 import xyz.hackage.rewritten.modules.render.NoHurtCam;
 import xyz.hackage.rewritten.util.Notification;
 import xyz.hackage.rewritten.util.NotificationManager;
@@ -101,6 +102,7 @@ public class Client {
 		mods.add(new Phase());
 		mods.add(new Speed());
 		mods.add(new GuiTesting());
+		mods.add(new InformationBox());
 	}
 	
 	public static void addChat(String message) {
@@ -132,9 +134,9 @@ public class Client {
 			if(m.getKey() == key) {
 				m.toggle();
 				if(m.toggled) {
-					NotificationManager.AssignNotification(new Notification("enabled " + m.name, 1000l, 0xff80ff80));
+					NotificationManager.AssignNotification(new Notification("Enabled " + m.name, 1000l, 0xff80ff80));
 				} else {
-					NotificationManager.AssignNotification(new Notification("disabled " + m.name, 1000l, 0xffff8080));
+					NotificationManager.AssignNotification(new Notification("Disabled " + m.name, 1000l, 0xffff8080));
 				}
 				
 			}

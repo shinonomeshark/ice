@@ -75,6 +75,7 @@ import net.minecraft.world.LockCode;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldSettings;
 import xyz.hackage.rewritten.Client;
+import xyz.hackage.rewritten.modules.movement.KeepSprint;
 
 @SuppressWarnings("incomplete-switch")
 public abstract class EntityPlayer extends EntityLivingBase {
@@ -922,7 +923,7 @@ public abstract class EntityPlayer extends EntityLivingBase {
                if(flag2) {
                   if(i > 0) {
                      targetEntity.addVelocity((double)(-MathHelper.sin(this.rotationYaw * (float)Math.PI / 180.0F) * (float)i * 0.5F), 0.1D, (double)(MathHelper.cos(this.rotationYaw * (float)Math.PI / 180.0F) * (float)i * 0.5F));
-                     if(!Client.modOn("keepsprint ")) {
+                     if(!Client.modOn(new KeepSprint().name)) {
 	                     this.motionX *= 0.6D;
 	                     this.motionZ *= 0.6D;
 	                     this.setSprinting(false);
