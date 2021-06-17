@@ -39,7 +39,7 @@ import xyz.hackage.rewritten.util.UnicodeFontRenderer;
 
 public class Client {
 	private static Minecraft mc = Minecraft.getMinecraft();
-	public static String VERSION = "v4";
+	public static String VERSION = "v1";
 	public static UnicodeFontRenderer bufr;
 	public static UnicodeFontRenderer bpufr;
 	public static UnicodeFontRenderer ufr;

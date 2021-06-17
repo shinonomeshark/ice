@@ -48,6 +48,7 @@ public class BetterMainMenu extends GuiScreen {
 		}
 		if(button.id == 3) {
 			this.mc.displayGuiScreen(new GuiAltLogin(new BetterMainMenu()));
+//			this.mc.displayGuiScreen(new GuiLogin());
 		}
 		if(button.id == 4) {
 			this.mc.displayGuiScreen(new GuiOptions(new BetterMainMenu(), mc.gameSettings));
@@ -73,7 +74,7 @@ public class BetterMainMenu extends GuiScreen {
 		this.drawGradientRect(0, 0, this.width, this.height, 0xff30ff80, 0xffffffff);
 		GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
 		
-		this.mc.getTextureManager().bindTexture(new ResourceLocation("hackage/icons/wal.jpg"));
+		this.mc.getTextureManager().bindTexture(new ResourceLocation("hackage/icons/wal.png"));
 		this.drawModalRectWithCustomSizedTexture(0, 0, 0, 0, sr.getScaledWidth(), sr.getScaledHeight(), sr.getScaledWidth(), sr.getScaledHeight());
 
 		this.drawRect(0, 0, 150, sr.getScaledHeight(), 0x90000000);
@@ -105,7 +106,7 @@ public class BetterMainMenu extends GuiScreen {
 ////                 );
 ////         }
 //         GL11.glEnd();
-//         
+//         	
 //         GL11.glEnable(GL11.GL_DEPTH_TEST);
 //         GL11.glEnable(GL11.GL_TEXTURE_2D);
 //         GL11.glDisable(GL11.GL_BLEND);
@@ -114,8 +115,8 @@ public class BetterMainMenu extends GuiScreen {
 		
 		
 		GlStateManager.color(255, 255, 255);
-		this.mc.getTextureManager().bindTexture(new ResourceLocation("hackage/icons/logo.png"));
-		this.drawModalRectWithCustomSizedTexture(130, 5, 0, 0, 120, 120, 120, 120);
+//		this.mc.getTextureManager().bindTexture(new ResourceLocation("hackage/icons/logo.png"));
+//		this.drawModalRectWithCustomSizedTexture(130, 5, 0, 0, 120, 120, 120, 120);
 		Client.sbufr.drawString("Sentinel", 46, 7, -1);
 //		Client.ufr.drawString(Client.VERSION, this.width - Client.ufr.getStringWidth(Client.VERSION) - 4, this.height - 14, 0xff000000);
 		
@@ -127,7 +128,7 @@ public class BetterMainMenu extends GuiScreen {
 		GlStateManager.color(255, 255, 255);
 		this.drawHorizontalLine((sr.getScaledWidth()+150)/2-105, (sr.getScaledWidth()+150)/2+104, (sr.getScaledHeight()/2)-62, 0xffffffff);
 		Client.ufr.drawCenteredString(Client.VERSION, (sr.getScaledWidth()+150)/2, (sr.getScaledHeight()/2)-80, -1);
-		Client.sufr.drawCenteredString("Merged Pine and SentinalPVP to create Sentinel", (sr.getScaledWidth()+150)/2, (sr.getScaledHeight()/2)-60, -1);
+		Client.sufr.drawCenteredString("Added scuffed auth system", (sr.getScaledWidth()+150)/2, (sr.getScaledHeight()/2)-60, -1);
 
 		Client.sufr.drawString("Created by ice & BRUDDA_OSAS", sr.getScaledWidth()-Client.sufr.getWidth("Created by ice & BRUDDA_OSAS")-2, sr.getScaledHeight()-10, -1);
 		super.drawScreen(mouseX, mouseY, partialTicks);

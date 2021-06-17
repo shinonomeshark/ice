@@ -84,6 +84,7 @@ public class HUD extends Gui {
 			
 			if(((ModeSetting) Client.getMod(new HudModule().name).settings.get(0)).getMode() == "astolfo") {
 				c1 = RainbowUtil.SkyRainbow(1, 1f, 0.6f);
+				c2 = RainbowUtil.SkyRainbow(1, 0.4f, 0.6f);
 			}
 		
 		if(!Client.modOn(new HudModule().name)) {
@@ -128,8 +129,6 @@ public class HUD extends Gui {
 				
 				if(((ModeSetting) Client.getMod(new HudModule().name).settings.get(0)).getMode() == "astolfo") {
 					c = RainbowUtil.SkyRainbow(count, 1f, 0.6f);
-					
-					
 				}
 				
 				String ting = m.name + " ";
@@ -217,7 +216,12 @@ public class HUD extends Gui {
 			}
 			
 			Gui.drawRect((int) (sr.getScaledWidth()), sr.getScaledHeight()-55, (int) (sr.getScaledWidth()+115), sr.getScaledHeight()-5, 0x90000000);
-			Gui.drawRect((int) (sr.getScaledWidth()), sr.getScaledHeight()-55, (int) (sr.getScaledWidth()+115), sr.getScaledHeight()-40, not.color);
+			Gui.drawRect((int) (sr.getScaledWidth()), sr.getScaledHeight()-6, (int) (sr.getScaledWidth()+115), sr.getScaledHeight()-5, not.color);
+			
+			Gui.drawRect((int) (sr.getScaledWidth()), sr.getScaledHeight()-55, (int) (sr.getScaledWidth()+115), sr.getScaledHeight()-40, -1);
+			
+
+			Gui.drawRect((int) (sr.getScaledWidth()), sr.getScaledHeight()-55, (int) (sr.getScaledWidth()+115), sr.getScaledHeight()-54, c1);
 			Gui.drawRect((int) (sr.getScaledWidth()), sr.getScaledHeight()-41, (int) (sr.getScaledWidth()+115), sr.getScaledHeight()-40, 0xff000000);
 				
 			sfr.drawString("Sentinel", (float) (sr.getScaledWidth()+4), sr.getScaledHeight()-54, 0);
@@ -252,6 +256,23 @@ public class HUD extends Gui {
 			Gui.drawRect((sr.getScaledWidth()/2)-75, (sr.getScaledHeight()/2)+20, (sr.getScaledWidth()/2)-73, (sr.getScaledHeight()/2)+70, c1);
 			Gui.drawRect((sr.getScaledWidth()/2)-70, (sr.getScaledHeight()/2)+55, (sr.getScaledWidth()/2)+70, (sr.getScaledHeight()/2)+65, c2);
 			Gui.drawRect((sr.getScaledWidth()/2)-70, (sr.getScaledHeight()/2)+55, (int) (((sr.getScaledWidth()/2))-70+(140*(elb.getHealth() / elb.getMaxHealth()))), (sr.getScaledHeight()/2)+65, c1);
+//			for(int i = 0; i < (((sr.getScaledWidth()/2))-70+(140*(elb.getHealth() / elb.getMaxHealth()))-(sr.getScaledWidth()/2-70));) {
+//				if(((ModeSetting) Client.getMod(new HudModule().name).settings.get(0)).getMode() == "astolfo") {
+//					this.drawRect((int) ((((sr.getScaledWidth()/2))-70)+i), sr.getScaledHeight()-55, (int) ((((sr.getScaledWidth()/2))-70+(140*(elb.getHealth()/2f / elb.getMaxHealth())))), sr.getScaledHeight()-56, RainbowUtil.SkyRainbow(i/10f, 1f, 0.6f));
+//				} else {
+//					this.drawRect((int) ((((sr.getScaledWidth()/2))-70)+i), sr.getScaledHeight()-55, (int) ((((sr.getScaledWidth()/2))-70+(140*(elb.getHealth()/2f / elb.getMaxHealth())))), sr.getScaledHeight()-56, RainbowUtil.getRainbow(i/10d));
+//				}
+//					i++;
+			
+//			this.drawRect(0, 0, 5, 5, RainbowUtil.SkyRainbow(1, 1f, 0.6f));
+//			this.drawRect(5, 5, 10, 10, RainbowUtil.SkyRainbow(10, 1f, 0.6f));
+//			this.drawGradientRect((sr.getScaledWidth()/2)-70, (sr.getScaledHeight()/2)+55, (int) (((sr.getScaledWidth()/2))-70+(140*(elb.getHealth() / elb.getMaxHealth()))), (sr.getScaledHeight()/2)+65, c1, RainbowUtil.SkyRainbow(10, 1f, 0.6f));
+			
+//			}
+			
+			
+			
+			
 			System.out.println(((sr.getScaledWidth()/2)+70)*(elb.getHealth() / elb.getMaxHealth()));
 			
 //			Client.sufr.drawString(((int)elb.getHealth()) +"", (((sr.getScaledWidth()/2))-70+(140*(elb.getHealth() / elb.getMaxHealth())))-Client.sufr.getWidth(((int)elb.getHealth()) + ""), (sr.getScaledHeight()/2)+54, 0);

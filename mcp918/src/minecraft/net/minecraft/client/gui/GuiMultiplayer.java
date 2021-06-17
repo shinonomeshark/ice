@@ -250,7 +250,7 @@ public class GuiMultiplayer extends GuiScreen implements GuiYesNoCallback {
    public void drawScreen(int mouseX, int mouseY, float partialTicks) {
       this.hoveringText = null;
 //      this.drawDefaultBackground();
-      this.mc.getTextureManager().bindTexture(new ResourceLocation("hackage/icons/wal.jpg"));
+      this.mc.getTextureManager().bindTexture(new ResourceLocation("hackage/icons/blur.png"));
 	  this.drawModalRectWithCustomSizedTexture(0, 0, 0, 0, this.width, this.height, this.width, this.height);
 
       this.serverListSelector.drawScreen(mouseX, mouseY, partialTicks);

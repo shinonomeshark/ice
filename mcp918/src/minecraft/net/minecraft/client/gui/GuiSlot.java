@@ -245,9 +245,7 @@ public abstract class GuiSlot
             //worldrenderer.pos((double)this.left, (double)this.top, 0.0D).tex((double)((float)this.left / f), (double)((float)(this.top + (int)this.amountScrolled) / f)).color(32, 32, 32, 255).endVertex();
             //tessellator.draw();
             
-            this.mc.getTextureManager().bindTexture(new ResourceLocation("hackage/icons/wal.jpg"));
-            Gui.drawScaledCustomSizeModalRect(0, 0, 0, 0, this.width, this.height, this.width, this.height, this.width, this.height);
-       
+           
             int k = this.left + this.width / 2 - this.getListWidth() / 2 + 2;
             int l = this.top + 4 - (int)this.amountScrolled;
 

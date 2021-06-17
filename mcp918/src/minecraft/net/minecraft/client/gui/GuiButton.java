@@ -91,7 +91,7 @@ public class GuiButton extends Gui {
             j = 0xff9090ff;
          }
 
-         Client.ufr.drawCenteredString(this.displayString, this.xPosition + this.width / 2, this.yPosition-2  + (this.height - 10) / 2, j);
+         Client.sufr.drawCenteredString(this.displayString, this.xPosition + this.width / 2, this.yPosition  + (this.height - 10) / 2, j);
       }
    }
 

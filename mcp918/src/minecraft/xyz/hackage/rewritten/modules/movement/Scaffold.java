@@ -27,11 +27,13 @@ import xyz.hackage.rewritten.events.listeners.EventMotion;
 import xyz.hackage.rewritten.events.listeners.EventUpdate;
 import xyz.hackage.rewritten.modules.Module;
 import xyz.hackage.rewritten.modules.settings.BooleanSetting;
+import xyz.hackage.rewritten.util.SystemTimerUtil;
 
 // kill me
 
 public class Scaffold extends Module {
 
+	int idk = 0;
 	int ticks = 0;
 	int tt = 0;
 	int tta = 0;
@@ -39,6 +41,9 @@ public class Scaffold extends Module {
 	boolean sneakFlag = false;
 	
 	float[] yp = new float[] {0,0};
+	
+	float oldy, oldp;
+	SystemTimerUtil spinningTim = new SystemTimerUtil();
 	
 	
 	BooleanSetting sneak = new BooleanSetting("sneak", true);
@@ -52,6 +57,12 @@ public class Scaffold extends Module {
 	}
 		
 	public void onEnable() {
+		
+		spinningTim.resetTime();
+		oldy = mc.thePlayer.rotationYaw;
+		oldp = mc.thePlayer.rotationPitch;
+		
+		
 //		mc.thePlayer.setSneaking(false);
 //		tt= (int) (mc.thePlayer.posY-1);
 //		int slot = 0;
@@ -187,16 +198,17 @@ public class Scaffold extends Module {
 //			float[] rots = new float[] {yaw, pitch};
 			
 //			return new float[] {yaw, pitch};
-			((EventMotion) e).setYaw(yp[0]);
-			((EventMotion) e).setPitch(yp[1]);
+			((EventMotion) e).setYaw(mc.thePlayer.rotationYaw + (yp[0] - oldy)*0.3f);
+			((EventMotion) e).setPitch(mc.thePlayer.rotationPitch + (yp[1] - oldp)*0.3f);
 
 //				} else {
 //					tt = 0;
 //					flick = false;
 //				}
 			
-//			mc.thePlayer.setPositionAndRotation(mc.thePlayer.posX, mc.thePlayer.posY, mc.thePlayer.posZ, yp[0], yp[1]);
-			
+//			mc.thePlayer.setPositionAndRotation(mc.thePlayer.posX, mc.thePlayer.posY, mc.thePlayer.posZ, mc.thePlayer.rotationYaw + (yp[0] - oldy)*0.3f, mc.thePlayer.rotationPitch + (yp[1] - oldp)*0.3f);
+			oldy = mc.thePlayer.rotationYaw;
+			oldp = mc.thePlayer.rotationPitch;
 //			}
 			if(getBlock(new BlockPos(mc.thePlayer.posX, tt, mc.thePlayer.posZ)) instanceof BlockAir) {
 				

@@ -15,22 +15,19 @@ public class Speed extends Module {
 	ModeSetting mode = new ModeSetting("mode", "scuffed", "scuffed", "scuffed2");
 	
 	public Speed() {
-		super("Speed", "nyoooom but onground", Keyboard.KEY_V, Category.MOVEMENT);
+		super("Speed", "hypixel idk", Keyboard.KEY_V, Category.MOVEMENT);
 		this.settings.add(mode);
 	}
 	
 	public void onEnable() {
 		t = 0;
 		if(mode.getMode() == "scuffed") {
-			
+			mc.timer.timerSpeed = 1f;
 		}
-		mc.thePlayer.sendQueue.addToSendQueue(new C03PacketPlayer.C04PacketPlayerPosition(mc.thePlayer.posX, mc.thePlayer.posY + 5.0001, mc.thePlayer.posZ, false));
-        mc.thePlayer.sendQueue.addToSendQueue(new C03PacketPlayer.C04PacketPlayerPosition(mc.thePlayer.posX, mc.thePlayer.posY, mc.thePlayer.posZ, false));
-        mc.thePlayer.sendQueue.addToSendQueue(new C03PacketPlayer.C04PacketPlayerPosition(mc.thePlayer.posX, mc.thePlayer.posY, mc.thePlayer.posZ, true));
 	}
 	
 	public void onDisable() {
-		
+		mc.timer.timerSpeed = 1f;
 	}
 	
 	public void onEvent(Event e) {
@@ -42,9 +39,16 @@ public class Speed extends Module {
 			if(mc.thePlayer.moveForward != 0 || mc.thePlayer.moveStrafing != 0) {
 				if(mc.thePlayer.onGround) {
 					mc.thePlayer.jump();
-	//				MoveUtil.strafe(0.47d);
+//					MoveUtil.strafe(1d);
 				} else {
-					MoveUtil.strafe(0.5d);
+					MoveUtil.strafe(0.2873d);
+				}
+				
+				if(mc.thePlayer.motionY < 0.3) {
+//					mc.thePlayer.motionY = -0.5f;
+					mc.timer.timerSpeed = 1f;
+				} else {
+					mc.timer.timerSpeed = 1f;
 				}
 			}
 			

@@ -45,7 +45,7 @@ extends GuiScreen {
 //        this.drawDefaultBackground();
     	sr = new ScaledResolution(Minecraft.getMinecraft());
 //    	this.drawRect(0, 0, sr.getScaledWidth(), sr.getScaledHeight(), 0xff000000);
-    	this.mc.getTextureManager().bindTexture(new ResourceLocation("hackage/icons/wal.jpg"));
+    	this.mc.getTextureManager().bindTexture(new ResourceLocation("hackage/icons/blur.png"));
   	  this.drawModalRectWithCustomSizedTexture(0, 0, 0, 0, this.width, this.height, this.width, this.height);
 
         this.username.drawTextBox();

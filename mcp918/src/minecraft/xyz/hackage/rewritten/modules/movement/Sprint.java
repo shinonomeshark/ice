@@ -17,11 +17,11 @@ public class Sprint extends Module {
 	public void onEvent(Event e) {
 		if(e instanceof EventUpdate && e.isPre()) {
 			if(mc.thePlayer.moveForward > 0 && !mc.thePlayer.isCollidedHorizontally) {
-				if(!Client.modOn(new Scaffold().name)) {
+//				if(!Client.modOn(new Scaffold().name)) {
 					mc.thePlayer.setSprinting(true);
-				} else {
-					mc.thePlayer.setSprinting(true);
-				}
+//				} else {
+//					mc.thePlayer.setSprinting(true);
+//				}
 				
 			}
 		}

@@ -22,6 +22,7 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.MathHelper;
 import xyz.hackage.rewritten.Client;
 import xyz.hackage.rewritten.events.Event;
+import xyz.hackage.rewritten.events.listeners.EventMotion;
 import xyz.hackage.rewritten.events.listeners.EventTeleport;
 import xyz.hackage.rewritten.events.listeners.EventUpdate;
 import xyz.hackage.rewritten.modules.Module;
@@ -67,6 +68,9 @@ public class Longjump extends Module {
 		
 		mc.timer.timerSpeed = 0.8f;
 		t = 0;
+		System.out.println("a " + mc.thePlayer.posY);
+		startY = mc.thePlayer.posY;
+		hasBeenHit = false;
 	}
 	public void onDisable() {
 //		mc.thePlayer.capabilities.isFlying = false;
@@ -78,51 +82,88 @@ public class Longjump extends Module {
 
 	
 	public void onEvent(Event e) {
+		if(e instanceof EventMotion) {
+//			if(t == 1) {
+//				((EventMotion) e).setY(startY+0.34999999403954d);
+//			} else if(t == 2) {
+//				((EventMotion) e).setY(startY+0.71000000834465d);
+//			} else if(t == 3) {
+//				((EventMotion) e).setY(startY+1.07000002264977);
+//			} else if(t == 4) {
+//				((EventMotion) e).setY(startY+1.43000003695488);
+//			} else if(t == 5) {
+//				((EventMotion) e).setY(startY+1.70440005631447);
+//			} else if(t == 6) {
+//				((EventMotion) e).setY(startY+2.00321386332928);
+//			} else if(t == 7) {
+//				((EventMotion) e).setY(startY+2.03094961251693);
+//			} else if(t == 8) {
+//				((EventMotion) e).setY(startY+2.979730645723965);
+//			} else if(t == 9) {
+//				((EventMotion) e).setY(startY+2.851136055764057);
+//			} else if(t == 10) {
+//				((EventMotion) e).setY(startY+2.6467133536247207);
+//			} else if(t == 11) {
+//				((EventMotion) e).setY(startY+2.3679791001032386);
+//			} else if(t == 12) {
+//				((EventMotion) e).setY(startY+2.0164195248098737);
+//			} else if(t == 13) {
+//				((EventMotion) e).setY(startY+2.5934911327910304);
+//			} else if(t == 14) {
+//				((EventMotion) e).setY(startY+2.100621299019966);
+//			}
+		}
 		if(e instanceof EventUpdate) {
 			if(e.isPre()) {
-				
-				
-				
-				
 				t++;
-				
-//				mc.thePlayer.sendQueue.addToSendQueue(new C0);
-				
-				if(t > 5) {
-//					mc.timer.timerSpeed = 1f;
+//				mc.thePlayer.posY = startY;
+				if(t == 14) {
+					this.toggle();
+				}
+				if(!hasBeenHit) {
 					
-					if(mc.thePlayer.onGround) {
-						toggle();
-					}
-				}
-				
-				if(t < 4) {
-					mc.thePlayer.motionY = 0.36f;
 					
-				} else {
-					if(mc.thePlayer.motionY < 0f) {
-						this.toggle();
+					
+					
+	//				mc.thePlayer.sendQueue.addToSendQueue(new C0);
+					
+					if(t > 5) {
+	//					mc.timer.timerSpeed = 1f;
+						
+						if(mc.thePlayer.onGround) {
+							toggle();
+						}
 					}
-//					mc.timer.timerSpeed = 0.1f;
+					
+					if(t < 4) {
+						mc.thePlayer.motionY = 0.36f;
+						
+					} else {
+						if(mc.thePlayer.motionY < 0f) {
+	//						this.toggle();
+						}
+	//					mc.timer.timerSpeed = 0.1f;
+					}
+					
+					if(t > 7) {
+	//					this.toggle();
+						hasBeenHit = true;
+					}
+					System.out.println("b " + mc.thePlayer.posY);
+					
+					
+	//				mc.thePlayer.motionY = 0f;
+	//				if(t % 4 == 0) {
+	//					startY = 0.1f;
+	//				} else if(t % 2 == 0) {
+	//					startY = -0.1f;
+	//				}
+					;
+	//				mc.thePlayer.motionX = 0f;
+	//				mc.thePlayer.motionZ = 0f;
+	//				mc.thePlayer.onGround = true;
+					MoveUtil.strafe(0.55d);
 				}
-				
-				if(t > 7) {
-//					this.toggle();
-				}
-				
-				
-				
-//				mc.thePlayer.motionY = 0f;
-//				if(t % 4 == 0) {
-//					startY = 0.1f;
-//				} else if(t % 2 == 0) {
-//					startY = -0.1f;
-//				}
-				;
-//				mc.thePlayer.motionX = 0f;
-//				mc.thePlayer.motionZ = 0f;
-//				mc.thePlayer.onGround = true;
-				MoveUtil.strafe(0.55d);
 			}
 		} else if(e instanceof EventTeleport) {
 			this.toggle();

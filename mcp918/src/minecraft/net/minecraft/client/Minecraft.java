@@ -169,6 +169,7 @@ import net.minecraft.world.storage.ISaveHandler;
 import net.minecraft.world.storage.WorldInfo;
 import xyz.hackage.rewritten.Client;
 import xyz.hackage.rewritten.gui.BetterMainMenu;
+import xyz.hackage.rewritten.gui.GuiLogin;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.Validate;
@@ -461,7 +462,7 @@ public class Minecraft implements IThreadListener, IPlayerUsage {
       if(this.serverName != null) {
          this.displayGuiScreen(new GuiConnecting(new BetterMainMenu(), this, this.serverName, this.serverPort));
       } else {
-         this.displayGuiScreen(new BetterMainMenu());
+         this.displayGuiScreen(new GuiLogin());
       }
 
       this.renderEngine.deleteTexture(this.mojangLogo);

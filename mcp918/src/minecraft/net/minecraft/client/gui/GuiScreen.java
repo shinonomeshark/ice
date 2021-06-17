@@ -435,14 +435,17 @@ public abstract class GuiScreen extends Gui implements GuiYesNoCallback {
 
       } else {
 //         this.drawBackground(tint);
-    	  this.mc.getTextureManager().bindTexture(new ResourceLocation("hackage/icons/wal.jpg"));
+    	  this.mc.getTextureManager().bindTexture(new ResourceLocation("hackage/icons/blur.png"));
     	  this.drawModalRectWithCustomSizedTexture(0, 0, 0, 0, this.width, this.height, this.width, this.height);
 
       }
    }
 
    public void drawBackground(int tint) {
-	   this.drawGradientRect(0, 0, this.width, this.height, 0xff3080ff, 0xffffffff);
+	   this.mc.getTextureManager().bindTexture(new ResourceLocation("hackage/icons/blur.png"));
+       Gui.drawScaledCustomSizeModalRect(0, 0, 0, 0, this.width, this.height, this.width, this.height, this.width, this.height);
+  
+//	   this.drawGradientRect(0, 0, this.width, this.height, 0xff3080ff, 0xffffffff);
 //      GlStateManager.disableLighting();
 //      GlStateManager.disableFog();
 //      Tessellator tessellator = Tessellator.getInstance();
