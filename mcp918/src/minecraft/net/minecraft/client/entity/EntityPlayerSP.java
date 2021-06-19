@@ -129,7 +129,6 @@ public class EntityPlayerSP extends AbstractClientPlayer {
 	  EventManager.callEvent(ev);
 	  
 	  if(!ev.cancelled) {
-//		  System.out.println("kys");
 	      boolean flag = this.isSprinting();
 	      if(flag != this.serverSprintState) {
 	         if(flag) {
@@ -193,6 +192,10 @@ public class EntityPlayerSP extends AbstractClientPlayer {
 	  }
       ev.setType(EventType.POST);
 	  EventManager.callEvent(ev);
+	  
+	  Client.yaw =ev.yaw;
+	  Client.pitch =ev.pitch;
+	  
    }
 
    public EntityItem dropOneItem(boolean dropAll) {

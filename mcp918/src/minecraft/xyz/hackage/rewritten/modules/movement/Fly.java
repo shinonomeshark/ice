@@ -67,6 +67,18 @@ public class Fly extends Module {
 			} else if (mode.getMode() == "verus-dev") {
 				mc.thePlayer.motionY = 0.004f;
 				
+				if(mc.thePlayer.hurtTime != 0) {
+					MoveUtil.strafe(0.7873d);
+				} else {
+					MoveUtil.strafe(0.4873d);
+				}
+				
+				if(mc.gameSettings.keyBindJump.pressed) {
+//					mc.thePlayer.motionY = 0.1f;
+				} else if(mc.gameSettings.keyBindSneak.pressed) {
+					mc.thePlayer.motionY = -1;
+				}
+				
 				if(mc.thePlayer.moveForward != 0 || mc.thePlayer.moveStrafing != 0) {
 					
 				} else {
@@ -74,7 +86,7 @@ public class Fly extends Module {
 					mc.thePlayer.motionZ = 0;
 				}
 				mc.thePlayer.onGround = true;
-				MoveUtil.strafe(8d);
+				
 			} else if (mode.getMode() == "watchdog") {
 				t++;
 				mc.thePlayer.motionY = 0f;

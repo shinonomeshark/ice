@@ -38,10 +38,29 @@ public class Speed extends Module {
 			
 			if(mc.thePlayer.moveForward != 0 || mc.thePlayer.moveStrafing != 0) {
 				if(mc.thePlayer.onGround) {
+					if(mc.theWorld.getCollidingBoundingBoxes(mc.thePlayer, mc.thePlayer.getEntityBoundingBox().offset(0, 3.0001, 0).expand(0, 0, 0)).isEmpty()) {
+						mc.thePlayer.sendQueue.addToSendQueue(new C03PacketPlayer.C04PacketPlayerPosition(mc.thePlayer.posX, mc.thePlayer.posY + 3.0001, mc.thePlayer.posZ, false));
+			            mc.thePlayer.sendQueue.addToSendQueue(new C03PacketPlayer.C04PacketPlayerPosition(mc.thePlayer.posX, mc.thePlayer.posY, mc.thePlayer.posZ, false));
+			            mc.thePlayer.sendQueue.addToSendQueue(new C03PacketPlayer.C04PacketPlayerPosition(mc.thePlayer.posX, mc.thePlayer.posY, mc.thePlayer.posZ, true));
+					}
+					mc.thePlayer.setPosition(mc.thePlayer.posX, mc.thePlayer.posY + 0.42, mc.thePlayer.posZ);
 					mc.thePlayer.jump();
+					MoveUtil.strafe(4d);
+					
 //					MoveUtil.strafe(1d);
 				} else {
-					MoveUtil.strafe(0.2873d);
+					if(t % 2 == 0) {
+//						MoveUtil.strafe(2.873d);
+//						mc.thePlayer.setPosition(t, t, t);
+						double move = 1f;
+						double playerYaw = Math.toRadians(mc.thePlayer.rotationYaw);
+//						mc.thePlayer.setPosition(mc.thePlayer.posX - (((double) move * Math.sin(playerYaw))), mc.thePlayer.posY, mc.thePlayer.posZ + (((double) move * Math.cos(playerYaw))));   
+						
+					} else {
+
+						
+					}
+					MoveUtil.strafe(0.32d);
 				}
 				
 				if(mc.thePlayer.motionY < 0.3) {

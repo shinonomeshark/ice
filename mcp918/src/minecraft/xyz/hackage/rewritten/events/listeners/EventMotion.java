@@ -1,5 +1,6 @@
 package xyz.hackage.rewritten.events.listeners;
 
+import xyz.hackage.rewritten.Client;
 import xyz.hackage.rewritten.events.Event;
 
 public class EventMotion extends Event<EventMotion> {
@@ -14,6 +15,7 @@ public class EventMotion extends Event<EventMotion> {
 		this.yaw = yaw;
 		this.pitch = pitch;
 		this.onGround = onGround;
+		
 	}
 
 	public double getX() {

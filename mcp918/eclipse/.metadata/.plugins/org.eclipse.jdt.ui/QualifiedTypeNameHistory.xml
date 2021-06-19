@@ -36,7 +36,6 @@
     <fullyQualifiedTypeName name="net.minecraft.util.Vec3i"/>
     <fullyQualifiedTypeName name="xyz.hackage.rewritten.modules.settings.ModeSetting"/>
     <fullyQualifiedTypeName name="net.minecraft.util.BlockPos"/>
-    <fullyQualifiedTypeName name="xyz.hackage.rewritten.Client"/>
     <fullyQualifiedTypeName name="xyz.hackage.rewritten.util.SystemTimerUtil"/>
     <fullyQualifiedTypeName name="net.minecraft.item.ItemStack"/>
     <fullyQualifiedTypeName name="net.minecraft.item.ItemBlock"/>
@@ -57,4 +56,8 @@
     <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
     <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
     <fullyQualifiedTypeName name="net.minecraft.client.Minecraft"/>
+    <fullyQualifiedTypeName name="xyz.hackage.rewritten.util.SSLUtilities"/>
+    <fullyQualifiedTypeName name="xyz.hackage.rewritten.Client"/>
+    <fullyQualifiedTypeName name="org.newdawn.slick.Image"/>
+    <fullyQualifiedTypeName name="xyz.hackage.rewritten.util.GuiUtil"/>
 </qualifiedTypeNameHistroy>

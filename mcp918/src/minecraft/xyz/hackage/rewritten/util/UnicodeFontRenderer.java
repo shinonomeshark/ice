@@ -178,7 +178,7 @@ public class UnicodeFontRenderer {
         float alpha = (float) (color >> 24 & 255) / 255.0F;
         GlStateManager.color(red, green, blue, alpha);
         
-        y = y+2f;
+//        y = y+2f;
 
         boolean blend = GL11.glIsEnabled(GL11.GL_BLEND);
         boolean lighting = GL11.glIsEnabled(GL11.GL_LIGHTING);

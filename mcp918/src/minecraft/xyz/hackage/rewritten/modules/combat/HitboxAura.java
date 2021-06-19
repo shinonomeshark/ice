@@ -123,7 +123,7 @@ public class HitboxAura extends Module {
     }
 
     private boolean canAttack(EntityLivingBase player) {
-        return player != mc.thePlayer && player.isEntityAlive() && mc.thePlayer.getDistanceToEntity(player) <= mc.playerController.getBlockReachDistance() && player.ticksExisted > 100;
+        return player != mc.thePlayer && player.isEntityAlive() && mc.thePlayer.getDistanceToEntity(player) <= mc.playerController.getBlockReachDistance();
 //    		return player instanceof EntityAnimal;
     }
     

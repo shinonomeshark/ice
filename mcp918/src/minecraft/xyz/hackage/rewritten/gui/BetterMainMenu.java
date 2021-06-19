@@ -4,6 +4,9 @@ import java.awt.Color;
 
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.opengl.GL11;
+import org.newdawn.slick.Image;
+import org.newdawn.slick.SlickException;
+import org.newdawn.slick.opengl.Texture;
 
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiMultiplayer;
@@ -74,11 +77,28 @@ public class BetterMainMenu extends GuiScreen {
 		this.drawGradientRect(0, 0, this.width, this.height, 0xff30ff80, 0xffffffff);
 		GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
 		
+		
+		
+		
+		
 		this.mc.getTextureManager().bindTexture(new ResourceLocation("hackage/icons/wal.png"));
-		this.drawModalRectWithCustomSizedTexture(0, 0, 0, 0, sr.getScaledWidth(), sr.getScaledHeight(), sr.getScaledWidth(), sr.getScaledHeight());
-
+		GL11.glScaled(0.1, 0.1, 1);
+		this.drawModalRectWithCustomSizedTexture(0, 0, 0, 0, sr.getScaledWidth()*10, sr.getScaledHeight()*10, sr.getScaledWidth()*10, sr.getScaledHeight()*10);
+		GL11.glScaled(10, 10, 1);
 		this.drawRect(0, 0, 150, sr.getScaledHeight(), 0x90000000);
       
+		try {
+//			Image a = new Image(Client.class.getResourceAsStream("/assets/hackage/icons/logo.png"), "icon" , false);
+//			a.setFilter(Image.FILTER_LINEAR);
+//			GL11.glScaled(0.4, 0.4, 1);
+//			a.draw(350, 50);
+//			GL11.glScaled(2.5, 2.5, 1);
+//			Image a = new Image()
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 //		 GlStateManager.pushMatrix();
 //         GL11.glEnable(GL11.GL_BLEND);
 //         GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
@@ -116,7 +136,9 @@ public class BetterMainMenu extends GuiScreen {
 		
 		GlStateManager.color(255, 255, 255);
 //		this.mc.getTextureManager().bindTexture(new ResourceLocation("hackage/icons/logo.png"));
-//		this.drawModalRectWithCustomSizedTexture(130, 5, 0, 0, 120, 120, 120, 120);
+//		GlStateManager.scale(0.25, 0.25, 1);
+//		this.drawModalRectWithCustomSizedTexture(130, 5, 0, 0, 480, 480, 480, 480);
+//		GlStateManager.scale(4, 4, 1);
 		Client.sbufr.drawString("Sentinel", 46, 7, -1);
 //		Client.ufr.drawString(Client.VERSION, this.width - Client.ufr.getStringWidth(Client.VERSION) - 4, this.height - 14, 0xff000000);
 		

@@ -15,7 +15,7 @@ import xyz.hackage.rewritten.util.NotificationManager;
 
 public class ClickGuiModule extends Module {
 
-	public ModeSetting theme = new ModeSetting("color", "sync", "ranee", "sync");
+	public ModeSetting theme = new ModeSetting("color", "sync", "ranee", "sync", "skeet");
 	
 	public ClickGuiModule() {
 		super("ClickGui", "hi this is where u are right now", Keyboard.KEY_RSHIFT, Category.RENDER);

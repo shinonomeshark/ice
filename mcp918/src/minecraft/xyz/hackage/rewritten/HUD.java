@@ -251,7 +251,7 @@ public class HUD extends Gui {
 		
 		if(attacking != null) {
 			EntityLivingBase elb = (EntityLivingBase) attacking;
-			
+			 
 			Gui.drawRect((sr.getScaledWidth()/2)-75, (sr.getScaledHeight()/2)+20, (sr.getScaledWidth()/2)+75, (sr.getScaledHeight()/2)+70, 0x50000000);
 			Gui.drawRect((sr.getScaledWidth()/2)-75, (sr.getScaledHeight()/2)+20, (sr.getScaledWidth()/2)-73, (sr.getScaledHeight()/2)+70, c1);
 			Gui.drawRect((sr.getScaledWidth()/2)-70, (sr.getScaledHeight()/2)+55, (sr.getScaledWidth()/2)+70, (sr.getScaledHeight()/2)+65, c2);

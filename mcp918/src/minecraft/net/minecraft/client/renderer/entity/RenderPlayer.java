@@ -17,6 +17,7 @@ import net.minecraft.scoreboard.Score;
 import net.minecraft.scoreboard.ScoreObjective;
 import net.minecraft.scoreboard.Scoreboard;
 import net.minecraft.util.ResourceLocation;
+import xyz.hackage.rewritten.Client;
 
 public class RenderPlayer extends RendererLivingEntity<AbstractClientPlayer> {
    private boolean smallArms;
@@ -48,7 +49,9 @@ public class RenderPlayer extends RendererLivingEntity<AbstractClientPlayer> {
          }
 
          this.setModelVisibilities(entity);
-         super.doRender(entity, x, d0, z, entityYaw, partialTicks);
+         
+//         super.doRender(entity, x, d0, z, entityYaw, partialTicks);
+         super.doRender(entity, x, d0, z, 0, partialTicks);
       }
    }
 

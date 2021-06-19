@@ -12,6 +12,10 @@ public class ResourceLocation {
       Validate.notNull(this.resourcePath);
    }
 
+   public String getPath() {
+	   return resourceDomain + "/" + resourcePath;
+   }
+   
    public ResourceLocation(String resourceName) {
       this(0, splitObjectName(resourceName));
    }

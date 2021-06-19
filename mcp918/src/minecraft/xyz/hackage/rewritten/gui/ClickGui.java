@@ -12,6 +12,8 @@ import net.minecraft.util.ResourceLocation;
 import xyz.hackage.rewritten.Client;
 import xyz.hackage.rewritten.HUD;
 import xyz.hackage.rewritten.modules.Module.Category;
+import xyz.hackage.rewritten.modules.render.ClickGuiModule;
+import xyz.hackage.rewritten.modules.settings.ModeSetting;
 import xyz.hackage.rewritten.util.AnimationUtil;
 import xyz.hackage.rewritten.util.Notification;
 import xyz.hackage.rewritten.util.NotificationManager;
@@ -25,11 +27,14 @@ public class ClickGui extends GuiScreen {
 	private boolean skidma = false;
 	private boolean closeFlag = false;
 	private GuiScreen closeTo = null;
+	private String mode = ((ModeSetting) Client.getMod(new ClickGuiModule().name).settings.get(0)).getMode();
 	
 	private DraggableTab move = new DraggableTab(Category.MOVEMENT, "move", 5, 30);
 	private DraggableTab combat = new DraggableTab(Category.COMBAT, "combat", 110, 30);
 	private DraggableTab render = new DraggableTab(Category.RENDER, "render", 215, 30);
 	private DraggableTab player = new DraggableTab(Category.PLAYER, "player", 320, 30);
+	
+	private SkeetWindow skeet = new SkeetWindow(50,50);
 	
 	public ClickGui() {
 		
@@ -103,6 +108,10 @@ public class ClickGui extends GuiScreen {
 		
 //		Gui.drawRect(0, 0, sr.getScaledWidth(), sr.getScaledHeight(), 0xaa000000);
 //		Client.sbufr.drawStringWithShadow("clickgui", 80, 0, HUD.c1);
+		
+		if(mode == "skeet") {
+			skeet.draw(mouseX, mouseY);
+		}
 		
 		move.draw(mouseX, mouseY);
 		combat.draw(mouseX, mouseY);

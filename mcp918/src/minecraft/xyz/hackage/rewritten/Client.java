@@ -46,6 +46,10 @@ public class Client {
 	public static UnicodeFontRenderer sufr;
 	public static UnicodeFontRenderer sbufr;
 	
+	public static String id = "err";
+	public static String username = "err";
+	
+	
 	public static HUD hud = new HUD();
 	
 	public static CmdMgr cmdmgr = new CmdMgr();
@@ -54,6 +58,7 @@ public class Client {
 	public static boolean moddedFlying = false;
 	public static boolean blink = false;
 	
+	public static float yaw,pitch;
 	
 	public static void lagDetect() {
 //		NotificationManager.AssignNotification(new Notification("tp / lagback detected", 2000l, 0xffff8080));

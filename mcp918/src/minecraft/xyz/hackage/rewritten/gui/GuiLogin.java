@@ -29,6 +29,7 @@ import xyz.hackage.rewritten.modules.render.HudModule;
 import xyz.hackage.rewritten.modules.settings.ModeSetting;
 import xyz.hackage.rewritten.util.GuiUtil;
 import xyz.hackage.rewritten.util.RainbowUtil;
+import xyz.hackage.rewritten.util.SSLUtilities;
 
 public class GuiLogin extends GuiScreen {
 	public GuiLogin () {		}
@@ -98,11 +99,18 @@ public class GuiLogin extends GuiScreen {
 	   }
 	
 	public void HandleSumSingWong() {
+
+
 		Thread t = new Thread() {
 			public void run() {
 				try {
+					
+					SSLUtilities.trustAllHostnames();
+					SSLUtilities.trustAllHttpsCertificates();
+					
 					thingText = "Connecting...";
 					thingText = getHTML("https://admin.sakamoto.games/verif?uid=" + textInBox + "&hwid=" + getHwid());
+					
 					Thread.sleep(3000l);
 					if(thingText.startsWith("Welcome, ")) {
 						mc.displayGuiScreen(new BetterMainMenu());
