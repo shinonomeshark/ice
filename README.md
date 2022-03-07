@@ -1,7 +1,2 @@
-# Sentinel
-how can you see this
-
-# going to leak?
-ok
-
-# this repo is a bit scuffed ngl
+- client now open source because its dead
+this used to be called ice client which lived like 1 week because discord so
